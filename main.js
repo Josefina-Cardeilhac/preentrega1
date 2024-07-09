@@ -1,9 +1,15 @@
-class Product {
-    constructor(nombre,precio) {
-        this.nombre = nombre;
-        this.precio = precio;
+class ProductManager {
+
+    constructor() {
+        this.products =[]
+    }
+
+    addProduct(title,description,price,img,code,stock){
+        if (!title || !description || !price || !img || !code || !stock )
+            {
+                console.log("todos los campos son obligatorios")
+                
+            }
     }
 
 }
- let shampoo =new Product("shampoo de avena", 6000);
- console.log(shampoo)
