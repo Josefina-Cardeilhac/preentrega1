@@ -24,10 +24,28 @@ class ProductManager {
                 stock
             }
 
-            this.products.push(nuevoProducto)
-            getProducts(){
-                return this.products
-            }
+            this.products.push(nuevoProducto);
+           
+    }
+    getProducts(){
+        return this.products
     }
 
+    getProductsById(id){
+        const producto = this.products.find(item => item.id === id);
+        if (!producto) {
+            console.error("not found");
+        }
+        else {
+            console.log(producto);
+        }
+    }
 }
+
+const manager = new ProductManager();
+
+console.log(manager.getProducts())
+
+manager.addProduct("Producto1", "producto prueba", 200, "sin img", "code123", 25);
+
+console.log(manager.getProducts());
