@@ -15,7 +15,7 @@ class ProductManager {
                 return;
             }
             const nuevoProducto = {
-                id: ProductManager.ultId,
+                id: ++ProductManager.ultId,
                 title, 
                 description,
                 price,
@@ -47,5 +47,6 @@ const manager = new ProductManager();
 console.log(manager.getProducts())
 
 manager.addProduct("Producto1", "producto prueba", 200, "sin img", "code123", 25);
+manager.addProduct("Producto2", "producto prueba2", 202, "sin img", "code122", 28);
 
 console.log(manager.getProducts());
